@@ -24,6 +24,7 @@ OMCPlayingViewController *playingVC = [[OMCPlayingViewController alloc] init];
 同时在App中提供一处入口，点击恢复显示该页面。
 
 实现类似下图所示的效果：
+
 ![enter image description here](https://github.com/creeveliu/minimizeViewControllerDemo/blob/master/QQ20170430-163220.gif)
 
 
