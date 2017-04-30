@@ -30,11 +30,11 @@ OMCPlayingViewController *playingVC = [[OMCPlayingViewController alloc] init];
 
 如何最合理的实现该效果呢？
 
-##实现思路
+## 实现思路
 
 dismiss一个VC后，VC是否会被销毁，取决于，除presenting VC之外还有没有其他对象强引用了这个VC。而我们要实现dismiss后不销毁的最小化功能，而且需要提供一个全局的入口，恢复显示该页面，最合理的显然是通过単例来强引用这个VC。
 
-##实现方法
+## 实现方法
 
 首先我们需要新建一个単例`OMCPlayingManager`。
 単例里面强引用一个对象`playingVC`:
