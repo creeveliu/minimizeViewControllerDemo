@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OMCPlayingViewController">
+            <connections>
+                <outlet property="mediaURLLabel" destination="nnd-AY-GlC" id="ZJ5-ck-LlN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NowPlayingVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rik-zD-VAW">
+                    <rect key="frame" x="131.5" y="323" width="112" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMa-L8-gQX">
+                    <rect key="frame" x="165" y="617" width="46" height="30"/>
+                    <state key="normal" title="最小化"/>
+                    <connections>
+                        <action selector="minimize:" destination="-1" eventType="touchUpInside" id="tbx-Vf-Ggf"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1o-1e-JAS">
+                    <rect key="frame" x="172" y="579" width="31" height="30"/>
+                    <state key="normal" title="销毁"/>
+                    <connections>
+                        <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="s1W-cP-AYJ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnd-AY-GlC">
+                    <rect key="frame" x="171" y="294" width="33" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rik-zD-VAW" firstAttribute="top" secondItem="nnd-AY-GlC" secondAttribute="bottom" constant="8" id="0uE-cN-rl5"/>
+                <constraint firstItem="Z1o-1e-JAS" firstAttribute="centerX" secondItem="zMa-L8-gQX" secondAttribute="centerX" id="5oi-SJ-Ezo"/>
+                <constraint firstItem="zMa-L8-gQX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CAc-Ak-Xfm"/>
+                <constraint firstItem="rik-zD-VAW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Eb9-a3-QNY"/>
+                <constraint firstItem="nnd-AY-GlC" firstAttribute="centerX" secondItem="rik-zD-VAW" secondAttribute="centerX" id="GFW-vw-jy4"/>
+                <constraint firstAttribute="bottom" secondItem="zMa-L8-gQX" secondAttribute="bottom" constant="20" id="Nop-gf-RFt"/>
+                <constraint firstItem="zMa-L8-gQX" firstAttribute="top" secondItem="Z1o-1e-JAS" secondAttribute="bottom" constant="8" id="Nzb-fL-H18"/>
+                <constraint firstItem="rik-zD-VAW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="t7L-Oz-pBf"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
